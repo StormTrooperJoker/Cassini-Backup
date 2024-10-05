@@ -1,6 +1,6 @@
 import xml.etree.ElementTree as ETree
 
-class Backup_XML_Handler:
+class Backup_Parser:
 
     def __init__(self):
         
@@ -43,16 +43,6 @@ class Backup_XML_Handler:
             #merge dicts
             self.Backupconf[backup_name] = path_info, destination_info
 
-def get_backupconf():
-    backup_handler = Backup_XML_Handler()
-    try:
-        backup_handler.load_xml()
-    except:
-        raise ETree.ParseError
-
-    try:
-        backup_handler.read_elements()
-    except:
-        raise ValueError
-    
-    return backup_handler.Backupconf
+    def preparse_elements(self):
+        for backups in self.Backupconf:
+            print(backups)
