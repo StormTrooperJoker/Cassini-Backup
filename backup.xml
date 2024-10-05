@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<cassini_conf>
+    <Backup name="srv01">
+       <path include="exe">D:, C:</path>
+       <destination name="default">, E:</destination>
+       <timestamp></timestamp>
+       <schedule></schedule>
+       <type>full</type>
+       <encrypt></encrypt>
+    </Backup>
+    <Backup name="srv02">
+       <path>C:</path>
+       <path>D:</path>
+    </Backup>
+</cassini_conf>
